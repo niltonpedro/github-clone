@@ -1,10 +1,23 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import GlobalStyles from './styles/GlobalStyles'
+import Header from './components/Header'
+import Profile from './pages/Profile';
+import Repo from './pages/Repo'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Inhai</h1>
-    </div>
+    <BrowserRouter>
+      <Header/>
+      <h1>inhai</h1>
+      <Routes>
+        <Route path='/' />
+        <Route path='/:username' element={<Profile/>}/>
+        <Route path='/:username/:reponame' element={<Repo/>} />
+      </Routes>
+      <GlobalStyles/>
+    </BrowserRouter>
   );
 }
 
