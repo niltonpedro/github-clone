@@ -9,12 +9,11 @@ export default createGlobalStyle`
 
   html {
     min-height: 100%;
-    background: var(--prymary)
+    background: #fff;
   }
 
   *, button, input {
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-    color: var(--black)
   }
 
   ul {
